@@ -11,6 +11,8 @@ Runs as a plugin in [Claude Code](https://claude.com/claude-code) and [Google An
 
 ---
 
+![ux-auditor banner](docs/images/banner.png)
+
 ## What It Does
 
 - **Fitts's Law & Touch Targets:** Inspects real rendered bounding boxes via Playwright. Flags touch targets `<44px` (iOS) or `<48px` (Android/WCAG), detects tight spacing (`<8px`) causing accidental taps, and tests mobile thumb zone reachability.
@@ -25,6 +27,8 @@ Runs as a plugin in [Claude Code](https://claude.com/claude-code) and [Google An
 - **Scored Deliverables:** Generates `UX-AUDIT-REPORT.md`, a phased `ACTION-PLAN.md` (P0 Quick Wins, P1 Mobile & Ergonomics, P2 Polish), `personas-analysis.md`, and an interactive standalone `ux-audit-report.html` with 1-click print-to-PDF styles.
 
 ---
+
+![Report overview: usability score, category breakdown, age cohort friendliness](docs/images/report-overview.png)
 
 ## Deliverables Generated
 
@@ -122,6 +126,8 @@ Open your agent in the project you want to audit and run:
 ---
 
 ## Example Finding
+
+![Example finding with evidence, impact and code remedy](docs/images/report-finding.png)
 
 ```markdown
 ### 🔴 [ERG-001] Mobile primary checkout CTA smaller than 44px minimum touch target
