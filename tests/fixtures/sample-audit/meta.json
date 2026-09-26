@@ -1,6 +1,6 @@
 {
   "project": "sample-shop",
-  "path": "/home/capz/sample-shop",
+  "path": "/workspace/sample-shop",
   "url": "http://localhost:3000",
   "date": "2026-09-26",
   "stack": ["React", "Next.js", "Tailwind CSS"],
