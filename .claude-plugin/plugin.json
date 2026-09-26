@@ -1,0 +1,28 @@
+{
+  "name": "ux-auditor",
+  "version": "1.0.0",
+  "description": "UX and usability audit for codebases and web applications. Based on the 21 Laws of UX (lawsofux.com) and NN/g 10 Usability Heuristics. Evaluates Desktop and Mobile viewports, simulates age cohort friction (Gen Z, Adults, Seniors), checks touch targets (Fitts's Law), color contrast, form friction, and produces scored reports (Markdown + interactive HTML) with concrete code remedies and phased action plans.",
+  "author": {
+    "name": "Capzel",
+    "url": "https://github.com/Capzel"
+  },
+  "homepage": "https://github.com/Capzel/ux-auditor#readme",
+  "repository": "https://github.com/Capzel/ux-auditor",
+  "license": "MIT",
+  "keywords": [
+    "ux",
+    "usability",
+    "laws-of-ux",
+    "nngroup",
+    "heuristics",
+    "audit",
+    "accessibility",
+    "fitts-law",
+    "hicks-law",
+    "mobile-ux",
+    "desktop-ux",
+    "age-simulation",
+    "wcag",
+    "playwright"
+  ]
+}

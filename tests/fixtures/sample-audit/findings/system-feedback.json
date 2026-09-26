@@ -1,0 +1,29 @@
+{
+  "category": "system-feedback",
+  "summary": "Feedback indicators and response timing review.",
+  "findings": [
+    {
+      "title": "Payment submission button lacks spinner during async transaction",
+      "status": "fail",
+      "severity": "high",
+      "confidence": "likely",
+      "evidence_tier": "static",
+      "viewport": "both",
+      "personas_affected": ["young", "adult", "senior"],
+      "laws": ["doherty-threshold"],
+      "heuristics": ["visibility-of-system-status", "error-prevention"],
+      "impact": "Users receive zero visual feedback when charging their card, frequently double-clicking and submitting twice.",
+      "evidence": [
+        {
+          "file": "components/PaymentForm.tsx",
+          "line": 89,
+          "snippet": "<button type=\"submit\" onClick={processPayment}>Pay Now</button>"
+        }
+      ],
+      "remedy": {
+        "summary": "Disable button upon click (disabled={isProcessing}) and display an inline loading spinner.",
+        "effort": "S"
+      }
+    }
+  ]
+}

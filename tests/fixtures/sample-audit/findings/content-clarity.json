@@ -1,0 +1,29 @@
+{
+  "category": "content-clarity",
+  "summary": "Terminology clarity and affordance review.",
+  "findings": [
+    {
+      "title": "Filter button contains only an icon without text label or aria-label",
+      "status": "warn",
+      "severity": "medium",
+      "confidence": "confirmed",
+      "evidence_tier": "static",
+      "viewport": "both",
+      "personas_affected": ["senior", "adult"],
+      "laws": ["jakobs-law"],
+      "heuristics": ["match-system-real-world", "recognition-rather-than-recall"],
+      "impact": "Users must guess the purpose of the icon, creating mystery-meat navigation friction.",
+      "evidence": [
+        {
+          "file": "components/FilterBar.tsx",
+          "line": 18,
+          "snippet": "<button className=\"p-2 border\"><FilterSvg /></button>"
+        }
+      ],
+      "remedy": {
+        "summary": "Add aria-label=\"Filter products\" and visible \"Filter\" text on larger viewports.",
+        "effort": "S"
+      }
+    }
+  ]
+}

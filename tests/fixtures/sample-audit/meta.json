@@ -1,0 +1,14 @@
+{
+  "project": "sample-shop",
+  "path": "/home/capz/sample-shop",
+  "url": "http://localhost:3000",
+  "date": "2026-09-26",
+  "stack": ["React", "Next.js", "Tailwind CSS"],
+  "evidence_tiers": {
+    "static": true,
+    "runtime": true,
+    "questionnaire": false
+  },
+  "executive_summary": "Sample audit showing good desktop performance but significant touch target and contrast gaps affecting senior users.",
+  "target_personas": ["young", "adult", "senior"]
+}

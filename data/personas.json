@@ -1,0 +1,140 @@
+{
+  "version": "1.0.0",
+  "personas": [
+    {
+      "id": "young",
+      "name": "Digital Native (Gen Z & Alpha)",
+      "age_range": "13-24",
+      "tagline": "Mobile-first, fast-paced, intuitive gesture reliance, low tolerance for latency",
+      "demographics_summary": "Extremely comfortable with modern digital interfaces, mobile touchscreens, and rapid video/visual information. Expects snappy performance, instant micro-feedback, and dark mode support.",
+      "physiological_profile": {
+        "visual_acuity": "High. Tolerates smaller fonts and moderate contrast, but prefers high visual polish.",
+        "motor_dexterity": "Excellent fine motor control, rapid thumb typing and one-handed mobile navigation.",
+        "cognitive_style": "Fast scanning over reading; low attention span for dense prose; high expectation of instant gratification.",
+        "sensory_habits": "Frequent audio/video consumption; high adoption of dark themes and gesture-driven UI."
+      },
+      "ergonomic_thresholds": {
+        "min_touch_target_px": 44,
+        "recommended_touch_target_px": 48,
+        "min_target_spacing_px": 6,
+        "min_body_font_size_px": 14,
+        "recommended_body_font_size_px": 16,
+        "min_contrast_ratio": 4.5,
+        "max_unsupported_doherty_ms": 300,
+        "max_chunk_size": 7
+      },
+      "top_friction_triggers": [
+        "Sluggish page transitions and unresponsiveness (>300ms without feedback).",
+        "Dense walls of un-chunked corporate text without visual hierarchy or bullet points.",
+        "Broken mobile responsiveness, requiring pinch-to-zoom or horizontal scrolling.",
+        "Multi-step bureaucratic forms that cannot be autofilled with social/Apple/Google login.",
+        "Outdated or rigid desktop-centric layouts ported badly to mobile."
+      ],
+      "key_laws_of_ux": [
+        "doherty-threshold",
+        "aesthetic-usability-effect",
+        "fitts-law",
+        "peak-end-rule",
+        "zeigarnik-effect"
+      ],
+      "key_heuristics": [
+        "visibility-of-system-status",
+        "flexibility-and-efficiency-of-use",
+        "aesthetic-and-minimalist-design"
+      ],
+      "simulation_lens": "When auditing through this persona, evaluate mobile touch ergonomics (thumb zone reach), instant visual micro-feedback, loading speeds, dark mode styling, and whether information is scannable in under 5 seconds."
+    },
+    {
+      "id": "adult",
+      "name": "Working Adult & Professional",
+      "age_range": "25-59",
+      "tagline": "Goal-oriented, value efficiency, cross-device multi-tasker, intolerant of time waste",
+      "demographics_summary": "Uses apps for commerce, productivity, utility, and work. Balances mobile devices during commutes with desktop monitors during work hours. Prioritizes task completion speed, clarity, data privacy, and reliable error recovery.",
+      "physiological_profile": {
+        "visual_acuity": "Normal to mild presbyopia starting in 40s. Needs clear typography, standard contrast, and good line spacing.",
+        "motor_dexterity": "Good motor skills with mouse/keyboard and mobile touch; prone to repetitive strain or multitasking distractions.",
+        "cognitive_style": "Task-oriented, pragmatic; appreciates power-user shortcuts, breadcrumbs, and search capabilities.",
+        "sensory_habits": "Cross-platform user switching frequently between desktop browser tabs and mobile apps."
+      },
+      "ergonomic_thresholds": {
+        "min_touch_target_px": 44,
+        "recommended_touch_target_px": 48,
+        "min_target_spacing_px": 8,
+        "min_body_font_size_px": 15,
+        "recommended_body_font_size_px": 16,
+        "min_contrast_ratio": 4.5,
+        "max_unsupported_doherty_ms": 400,
+        "max_chunk_size": 7
+      },
+      "top_friction_triggers": [
+        "Inability to use keyboard navigation or copy-paste into form fields (e.g. password managers).",
+        "Disorganized navigation hierarchies lacking search, filters, or breadcrumbs.",
+        "Unexpected loss of form state or checkout progress when navigating back.",
+        "Unclear pricing, hidden fees, or convoluted subscription cancellation flows.",
+        "Poor desktop layout density (e.g. mobile card layout stretched awkwardly across a 27-inch 4K screen)."
+      ],
+      "key_laws_of_ux": [
+        "hicks-law",
+        "jakobs-law",
+        "parkinsons-law",
+        "postels-law",
+        "teslers-law"
+      ],
+      "key_heuristics": [
+        "user-control-and-freedom",
+        "consistency-and-standards",
+        "flexibility-and-efficiency-of-use",
+        "error-prevention"
+      ],
+      "simulation_lens": "When auditing through this persona, evaluate keyboard accessibility, autofill compliance, cross-viewport layout adaptation, search/filter power, and whether the interface respects the user's time without forced friction."
+    },
+    {
+      "id": "senior",
+      "name": "Older Adult & Senior",
+      "age_range": "60+",
+      "tagline": "Vulnerable to small touch targets, low contrast, memory fatigue, and technical jargon",
+      "demographics_summary": "Increasingly active online for healthcare, banking, government services, communication, and shopping. Faces age-related changes in vision (presbyopia, cataracts, reduced contrast sensitivity), motor dexterity (tremors, arthritis), and working memory.",
+      "physiological_profile": {
+        "visual_acuity": "Significant decline in contrast sensitivity and light intake; reduced ability to focus on small text (<16px); color discrimination reduction (especially blues and light grays).",
+        "motor_dexterity": "Reduced hand steadiness, slower reaction times; prone to accidental double-taps or mistapping closely spaced links.",
+        "cognitive_style": "Relies heavily on recognition over recall; lower working memory capacity; cautious and risk-averse regarding online mistakes.",
+        "sensory_habits": "Frequently relies on browser zoom, high contrast settings, or screen enlargement."
+      },
+      "ergonomic_thresholds": {
+        "min_touch_target_px": 48,
+        "recommended_touch_target_px": 56,
+        "min_target_spacing_px": 12,
+        "min_body_font_size_px": 16,
+        "recommended_body_font_size_px": 18,
+        "min_contrast_ratio": 7.0,
+        "max_unsupported_doherty_ms": 600,
+        "max_chunk_size": 5
+      },
+      "top_friction_triggers": [
+        "Small touch targets (<48px) packed closely together without generous padding.",
+        "Low-contrast gray text on white/off-white backgrounds (e.g. #9ca3af on white).",
+        "Small font sizes (<16px) or disabling viewport zooming (user-scalable=no).",
+        "Mystery-meat icons lacking explicit text labels (e.g. unlabelled hamburger or gear icons).",
+        "Auto-advancing carousels, timers, or fast slideshows that cannot be paused.",
+        "Cryptic error messages or blaming language without clear, reassuring step-by-step recovery.",
+        "Complex multi-level dropdowns that disappear when the mouse drifts slightly off target."
+      ],
+      "key_laws_of_ux": [
+        "fitts-law",
+        "millers-law",
+        "proximity-law",
+        "common-region-law",
+        "postels-law",
+        "jakobs-law"
+      ],
+      "key_heuristics": [
+        "match-system-real-world",
+        "recognition-rather-than-recall",
+        "error-prevention",
+        "help-users-recognize-errors",
+        "help-and-documentation"
+      ],
+      "simulation_lens": "When auditing through this persona, evaluate strict contrast ratios (>=7:1 target), large touch hit-boxes (>=48x48px), generous line spacing (>=1.5), visible text labels on all icons, avoidance of auto-scrolling distractions, and compassionate error recovery."
+    }
+  ]
+}

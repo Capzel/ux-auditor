@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Shop</title>
+</head>
+<body>
+  <header>
+    <a href="/" aria-label="Accessible Shop Home">AccessibleShop</a>
+    <button aria-label="Search items">
+      <svg width="24" height="24"><path d="M0 0h24v24H0z"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <button style="min-height: 48px; min-width: 48px; padding: 12px 24px;">
+      Buy Now
+    </button>
+
+    <form>
+      <div>
+        <label for="user-email">Email Address</label>
+        <input id="user-email" type="email" name="email" autocomplete="email" />
+      </div>
+      <div>
+        <label for="user-phone">Phone Number</label>
+        <input id="user-phone" type="tel" name="phone" autocomplete="tel" />
+      </div>
+      <button type="submit" style="min-height: 48px;">Submit</button>
+    </form>
+
+    <img src="banner.jpg" alt="Summer collection discount promotion">
+  </main>
+</body>
+</html>

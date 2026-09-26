@@ -1,0 +1,248 @@
+{
+  "version": "1.0.0",
+  "source": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+  "author": "Jakob Nielsen",
+  "heuristics": [
+    {
+      "id": "visibility-of-system-status",
+      "number": 1,
+      "name": "Visibility of system status",
+      "summary": "The design should always keep users informed about what is going on, through appropriate feedback within a reasonable amount of time.",
+      "checklist": [
+        "Are feedback indicators (spinners, skeletons, progress bars) shown during loading or processing?",
+        "Are active navigation links and selected tabs visibly highlighted?",
+        "Do form submit buttons provide instant visual confirmation (loading state / disabled) on click?",
+        "Are successful actions followed by clear confirmation messages (toasts, alerts)?",
+        "Does the interface communicate background operations, sync status, or connection state?"
+      ],
+      "common_violations": [
+        "Clicking submit leaves the button unchanged while a network request runs, leading to double-clicks.",
+        "Page transitions show a frozen blank white screen with no loading indicator.",
+        "File uploads lack progress percentages or remaining time estimates.",
+        "Selected items or active navigation tabs look indistinguishable from unselected ones."
+      ],
+      "remedies": [
+        "Add instant disabled and loading spinner states to buttons upon form submission.",
+        "Use skeleton placeholders for content loading to communicate structural progress.",
+        "Display toast notifications or inline banners confirming action success (e.g. 'Saved!').",
+        "Use clear contrasting accent styles for active navigation tabs and links."
+      ]
+    },
+    {
+      "id": "match-system-real-world",
+      "number": 2,
+      "name": "Match between system and the real world",
+      "summary": "The design should speak the users' language. Use words, phrases, and concepts familiar to the user, rather than internal jargon. Follow real-world conventions, making information appear in a natural and logical order.",
+      "checklist": [
+        "Is copy written in user-centric language without internal technical jargon or database terms?",
+        "Do icons match real-world objects and user expectations (e.g. magnifying glass for search, trash for delete)?",
+        "Are dates, currencies, and numbers formatted according to user locale conventions?",
+        "Does information appear in a natural, logical sequence that mirrors user task workflows?"
+      ],
+      "common_violations": [
+        "Exposing internal database error codes (e.g. 'ORA-01403: no data found' or 'NullPointerException').",
+        "Using developer/business acronyms that everyday users do not understand.",
+        "Unconventional icons that do not clearly convey their real-world metaphor (mystery-meat navigation).",
+        "Sorting items or form steps in arbitrary developer order rather than user workflow order."
+      ],
+      "remedies": [
+        "Translate technical errors into plain, human-friendly explanations with actionable guidance.",
+        "Adopt standard, universally understood metaphors for common actions.",
+        "Format dates and numbers based on client locale settings (e.g. Intl.DateTimeFormat).",
+        "Conduct card sorting and usability testing to validate terminology with target users."
+      ]
+    },
+    {
+      "id": "user-control-and-freedom",
+      "number": 3,
+      "name": "User control and freedom",
+      "summary": "Users often perform actions by mistake. They need a clearly marked 'emergency exit' to leave the unwanted action without having to go through an extended process. Support undo and redo.",
+      "checklist": [
+        "Can users easily cancel or exit out of modals, dialogs, and overlays (Esc key, close button, backdrop click)?",
+        "Is there an 'Undo' option for destructive or irreversible actions (e.g. delete, archive)?",
+        "Can users easily navigate back in multi-step workflows without losing previously entered data?",
+        "Can users edit or delete information they have previously submitted?"
+      ],
+      "common_violations": [
+        "Modals that trap user focus and cannot be closed with the Escape key or a visible 'X' button.",
+        "Multi-step wizards where clicking 'Back' clears all entered form fields or breaks browser history.",
+        "Irreversible delete operations with neither a confirmation step nor an 'Undo' toast mechanism.",
+        "Full-screen takeover interstitials with no prominent dismissal mechanism."
+      ],
+      "remedies": [
+        "Provide clear 'Cancel' buttons and ensure the Escape key and backdrop clicks dismiss overlays.",
+        "Implement 'Undo' snackbars for delete/archive actions (giving a 5-10s reversal window).",
+        "Preserve form state in local memory or session storage when users navigate back and forth in wizards.",
+        "Support standard browser navigation (History API pushState/popState) seamlessly."
+      ]
+    },
+    {
+      "id": "consistency-and-standards",
+      "number": 4,
+      "name": "Consistency and standards",
+      "summary": "Users should not have to wonder whether different words, situations, or actions mean the same thing. Follow platform and industry conventions.",
+      "checklist": [
+        "Are visual styles (colors, typography, button variants) applied consistently across all pages?",
+        "Are terminology and naming conventions identical throughout the product (e.g. not mixing 'Cart' and 'Basket')?",
+        "Do standard UI elements (links, form inputs, buttons, checkboxes) behave according to web conventions?",
+        "Does the design adhere to platform standards (e.g. iOS Human Interface Guidelines, Android Material Design)?"
+      ],
+      "common_violations": [
+        "Using 'Delete' on one screen, 'Remove' on another, and 'Trash' on a third for the exact same function.",
+        "Primary action buttons styled green on one page, blue on another, and orange on a third.",
+        "Making links look like static text or styling static text as underlined clickable links.",
+        "Inverting standard modal button placements across different dialogs in the same app."
+      ],
+      "remedies": [
+        "Implement and enforce a centralized Design System with shared tokens and component primitives.",
+        "Standardize button hierarchy: primary action right/bottom, secondary/cancel left.",
+        "Create a product glossary to ensure uniform copy and terminology across all screens.",
+        "Keep hyperlink colors and underline affordances consistent site-wide."
+      ]
+    },
+    {
+      "id": "error-prevention",
+      "number": 5,
+      "name": "Error prevention",
+      "summary": "Even better than good error messages is a careful design which prevents a problem from occurring in the first place. Either eliminate error-prone conditions, or check for them and present users with a confirmation option before they commit to the action.",
+      "checklist": [
+        "Are destructive actions (e.g. deleting an account or database) gated by an explicit confirmation dialog?",
+        "Does the interface prevent input errors through constraints (e.g. date pickers, number steppers, format masks)?",
+        "Are sensible smart defaults provided to prevent invalid configurations?",
+        "Does inline validation warn users before submission if passwords don't match or fields are missing?"
+      ],
+      "common_violations": [
+        "Deleting a resource immediately upon clicking a single un-warned icon button.",
+        "Allowing users to submit a form with obvious format errors only to display a wall of errors afterwards.",
+        "Free-text input for dates, currencies, or states without input masks or dropdown constraints.",
+        "Case-sensitive email address or coupon code verification that rejects lowercase inputs."
+      ],
+      "remedies": [
+        "Require confirmation dialogs with explicit consequences for destructive actions.",
+        "Use appropriate HTML5 input types (type='email', type='tel', type='date') and input constraints.",
+        "Provide real-time inline validation feedback as users complete fields (onBlur or debounced onChange).",
+        "Auto-format and sanitize inputs on client-side (e.g. case-insensitive email comparison, auto-formatting phone numbers)."
+      ]
+    },
+    {
+      "id": "recognition-rather-than-recall",
+      "number": 6,
+      "name": "Recognition rather than recall",
+      "summary": "Minimize the user's memory load by making elements, actions, and options visible. The user should not have to remember information from one part of the interface to another. Information required to use the design should be visible or easily retrievable when needed.",
+      "checklist": [
+        "Are interactive options, menu items, and field requirements visible rather than hidden behind memory recall?",
+        "Do input fields display helpful placeholder examples and persistent labels above fields?",
+        "Does the interface display recently viewed items, recent searches, or previous order history?",
+        "Are icons accompanied by visible text labels or clear tooltips?"
+      ],
+      "common_violations": [
+        "Using floating labels that disappear or placeholder text as the only label, disappearing once user types.",
+        "Icon-only navigation bars without text labels where icons have ambiguous meanings.",
+        "Multi-step checkout where user cannot see what items they are purchasing on the payment step.",
+        "Complex password requirements hidden until after the user fails the submission."
+      ],
+      "remedies": [
+        "Always use persistent visible field labels (never rely solely on input placeholders).",
+        "Pair icons with explicit text labels, especially in navigation and utility bars.",
+        "Display order summaries, selected configurations, and cart items alongside checkout steps.",
+        "Display password strength and formatting rules upfront before the user starts typing."
+      ]
+    },
+    {
+      "id": "flexibility-and-efficiency-of-use",
+      "number": 7,
+      "name": "Flexibility and efficiency of use",
+      "summary": "Shortcuts — hidden from novice users — may speed up the interaction for the expert user such that the design can cater to both inexperienced and experienced users. Allow users to tailor frequent actions.",
+      "checklist": [
+        "Are keyboard shortcuts available for high-frequency actions (e.g. Cmd+K search, Esc to close, Enter to submit)?",
+        "Can users customize, filter, sort, or paginate large sets of data?",
+        "Does the design accommodate both novice step-by-step guidance and fast power-user workflows?",
+        "Are frequently used actions or bookmarks readily accessible from the home view?"
+      ],
+      "common_violations": [
+        "Forms that cannot be navigated using the Tab key or submitted using the Enter key.",
+        "Disabling copy/paste on input fields (e.g. preventing password manager autofill or OTP pasting).",
+        "Large data lists with no sorting, filtering, or search capabilities.",
+        "Forcing experienced users to click through 5 wizard steps for simple recurring tasks."
+      ],
+      "remedies": [
+        "Ensure full keyboard navigation accessibility with proper tab order and shortcut triggers.",
+        "Never disable paste on inputs (support password managers and OTP autofill).",
+        "Add quick filters, column sorting, and pagination controls to tabular data.",
+        "Provide quick-action menus and command palettes (Cmd/Ctrl + K) for rapid power-user access."
+      ]
+    },
+    {
+      "id": "aesthetic-and-minimalist-design",
+      "number": 8,
+      "name": "Aesthetic and minimalist design",
+      "summary": "Interfaces should not contain information that is irrelevant or rarely needed. Every extra unit of information in an interface competes with the relevant units of information and diminishes their relative visibility.",
+      "checklist": [
+        "Is the visual hierarchy clear, with prominent primary content and subdued secondary elements?",
+        "Is whitespace used effectively to breathe room between distinct visual sections?",
+        "Are decorative visual elements kept purposeful rather than adding visual noise?",
+        "Is copy concise, scannable, and formatted with subheadings and bullet points?"
+      ],
+      "common_violations": [
+        "Cluttered layouts crammed with competing banners, badges, popups, and conflicting CTAs.",
+        "Dense paragraphs of unbroken marketing text that users skim past.",
+        "Excessive visual ornamentation (harsh gradients, heavy drop shadows, blinking animations) distracting from content.",
+        "Equal visual weight given to 10 different elements on a single screen."
+      ],
+      "remedies": [
+        "Audit screens to remove non-essential copy, redundant badges, and visual clutter.",
+        "Utilize generous whitespace (16px, 24px, 32px, 48px padding and gaps) to establish rhythm.",
+        "Format content with bold lead phrases, bulleted lists, and clear heading hierarchies (H1 -> H2 -> H3).",
+        "Ensure only one primary Call-to-Action (CTA) dominates the viewport."
+      ]
+    },
+    {
+      "id": "help-users-recognize-errors",
+      "number": 9,
+      "name": "Help users recognize, diagnose, and recover from errors",
+      "summary": "Error messages should be expressed in plain language (no error codes), precisely indicate the problem, and constructively suggest a solution.",
+      "checklist": [
+        "Are error messages written in clear, polite, human language explaining what went wrong?",
+        "Do error messages specifically explain how to resolve the issue (constructive remedy)?",
+        "Are errors highlighted visually with high contrast, icons, and inline placement near the offending field?",
+        "Does the interface preserve user input when an error occurs so they don't have to re-type?"
+      ],
+      "common_violations": [
+        "Cryptic error messages: 'Error 400: Bad Request' or 'An unexpected error occurred'.",
+        "Blaming the user: 'You entered an invalid phone number' without showing acceptable formats.",
+        "Indicating error only with a red border without descriptive text or icon (inaccessible to colorblind users).",
+        "Clearing input fields or passwords when submission fails."
+      ],
+      "remedies": [
+        "State what happened and how to fix it in plain language (e.g. 'Please enter an email with @ and a domain like user@example.com').",
+        "Position inline error messages directly below the corresponding input with an error icon.",
+        "Ensure error text satisfies WCAG contrast (>= 4.5:1 ratio against background).",
+        "Keep all valid user input intact when re-rendering forms after validation failures."
+      ]
+    },
+    {
+      "id": "help-and-documentation",
+      "number": 10,
+      "name": "Help and documentation",
+      "summary": "It’s best if the system doesn’t need any additional explanation, but it may be necessary to provide documentation to help users understand how to complete their tasks.",
+      "checklist": [
+        "Is contextual help (tooltips, inline helper text, info icons) available next to complex concepts?",
+        "Is documentation easy to search, task-oriented, and focused on user steps?",
+        "Are empty states informative, guiding users on what action to take next?",
+        "Can users easily contact human support or access FAQs when stuck?"
+      ],
+      "common_violations": [
+        "Blank, empty screens with no guidance when a user has no projects, messages, or items yet.",
+        "Technical jargon in tooltips that repeats the field label rather than explaining its purpose.",
+        "Hiding documentation or help links in obscure footers without search.",
+        "No clear pathway to reach customer support or report a problem."
+      ],
+      "remedies": [
+        "Design welcoming empty states with an illustration, explanation, and primary CTA to get started.",
+        "Add contextual helper text or informational tooltips to complex input fields.",
+        "Provide task-oriented quick-start guides and searchable knowledge base articles.",
+        "Include accessible help widgets or clear contact links in the header/footer."
+      ]
+    }
+  ]
+}

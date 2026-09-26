@@ -1,0 +1,22 @@
+{
+  "name": "ux-auditor",
+  "owner": {
+    "name": "Capzel"
+  },
+  "metadata": {
+    "description": "UX and usability audit plugin based on the 21 Laws of UX and NN/g 10 Usability Heuristics, supporting mobile & desktop evaluation and age cohort simulation."
+  },
+  "plugins": [
+    {
+      "name": "ux-auditor",
+      "source": "./",
+      "description": "UX audit for web apps: 9 skills, 7 specialist agents, Playwright runtime checks for desktop & mobile, age simulation (Gen Z, adults, seniors), and scored reports with code remedies.",
+      "author": {
+        "name": "Capzel",
+        "url": "https://github.com/Capzel"
+      },
+      "category": "design",
+      "keywords": ["ux", "usability", "laws-of-ux", "nngroup", "heuristics", "audit", "mobile", "desktop", "seniors", "accessibility"]
+    }
+  ]
+}

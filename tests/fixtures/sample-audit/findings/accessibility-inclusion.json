@@ -1,0 +1,30 @@
+{
+  "category": "accessibility-inclusion",
+  "summary": "Accessibility and age cohort inclusivity audit.",
+  "findings": [
+    {
+      "title": "Viewport zooming is prevented by maximum-scale=1.0 and user-scalable=no",
+      "status": "fail",
+      "severity": "critical",
+      "confidence": "confirmed",
+      "evidence_tier": "static",
+      "viewport": "mobile",
+      "personas_affected": ["senior"],
+      "laws": ["aesthetic-usability-effect"],
+      "heuristics": ["flexibility-and-efficiency-of-use", "user-control-and-freedom"],
+      "impact": "Older adults and visually impaired users cannot pinch-to-zoom to enlarge text, violating WCAG 1.4.4.",
+      "evidence": [
+        {
+          "file": "index.html",
+          "line": 4,
+          "snippet": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\">"
+        }
+      ],
+      "remedy": {
+        "summary": "Remove user-scalable=no and maximum-scale=1.0 from the viewport meta tag.",
+        "effort": "S",
+        "code": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+      }
+    }
+  ]
+}

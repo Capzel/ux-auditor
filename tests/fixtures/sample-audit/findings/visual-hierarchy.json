@@ -1,0 +1,29 @@
+{
+  "category": "visual-hierarchy",
+  "summary": "Visual hierarchy analysis covering form chunking, layout density, and Miller's Law.",
+  "findings": [
+    {
+      "title": "Checkout form contains 14 unchunked fields causing cognitive overload",
+      "status": "warn",
+      "severity": "medium",
+      "confidence": "confirmed",
+      "evidence_tier": "static",
+      "viewport": "both",
+      "personas_affected": ["young", "adult", "senior"],
+      "laws": ["millers-law", "hicks-law"],
+      "heuristics": ["aesthetic-and-minimalist-design"],
+      "impact": "Users face high cognitive fatigue trying to fill out 14 fields at once without visual grouping.",
+      "evidence": [
+        {
+          "file": "components/CheckoutForm.tsx",
+          "line": 24,
+          "snippet": "<form className=\"space-y-4\">{/* 14 input fields */}</form>"
+        }
+      ],
+      "remedy": {
+        "summary": "Divide form into 2 visual cards: Personal Info and Shipping Address.",
+        "effort": "S"
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Intentional UX defect: zoom disabled -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Friction Shop</title>
+  <style>
+    /* Intentional UX defect: focus outline stripped */
+    button:focus, input:focus { outline: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Intentional UX defect: logo not linked -->
+    <div>FrictionShop</div>
+    <!-- Intentional UX defect: icon button without label -->
+    <button>
+      <svg width="24" height="24"><path d="M0 0h24v24H0z"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <!-- Intentional UX defect: small button target -->
+    <button class="h-6 px-1 text-xs btn">Quick Buy</button>
+
+    <!-- Intentional UX defect: massive form without steps + inputs without labels or autocomplete -->
+    <form>
+      <input type="text" name="email" placeholder="Your email..." />
+      <input type="text" name="phone" placeholder="Phone..." />
+      <input type="text" name="address" placeholder="Address..." />
+      <input type="text" name="field4" placeholder="Field 4" />
+      <input type="text" name="field5" placeholder="Field 5" />
+      <input type="text" name="field6" placeholder="Field 6" />
+      <input type="text" name="field7" placeholder="Field 7" />
+      <input type="text" name="field8" placeholder="Field 8" />
+      <input type="text" name="field9" placeholder="Field 9" />
+      <input type="text" name="field10" placeholder="Field 10" />
+      <input type="text" name="field11" placeholder="Field 11" />
+      <input type="text" name="field12" placeholder="Field 12" />
+      <button type="submit">Submit Order</button>
+    </form>
+
+    <!-- Intentional UX defect: image without alt -->
+    <img src="banner.jpg">
+  </main>
+</body>
+</html>

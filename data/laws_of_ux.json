@@ -1,0 +1,511 @@
+{
+  "version": "1.0.0",
+  "source": "https://lawsofux.com/",
+  "laws": [
+    {
+      "id": "fitts-law",
+      "name": "Fitts's Law",
+      "category": "Heuristic",
+      "summary": "The time to acquire a target is a function of the distance to and width of the target.",
+      "key_takeaways": [
+        "Touch targets should be large enough for users to accurately select them (minimum 44x44px iOS / 48x48px Android).",
+        "Touch targets should have ample spacing between them (at least 8-12px) to prevent accidental taps.",
+        "Touch targets should be placed in areas of the screen that are easy to reach, especially within the mobile thumb zone."
+      ],
+      "origin": "In 1954, psychologist Paul Fitts examining the human motor system showed that the time required to rapidly move to a target area is a function of the ratio between distance to target and target width.",
+      "ui_violations": [
+        "Interactive buttons or links smaller than 44x44px on mobile viewports.",
+        "Icons or close buttons positioned tightly next to other clickable elements without padding.",
+        "Primary action buttons placed at the top of long mobile screens outside easy thumb reach.",
+        "Clickable table rows where only a tiny text link or icon is clickable instead of the full hit zone."
+      ],
+      "remedies": [
+        "Enforce min-height and min-width of 44px (or 48px) with padding: min-h-[48px] min-w-[48px].",
+        "Use CSS touch-action and pointer-events appropriately, or wrap icons in padded button elements.",
+        "Place primary checkout/submit CTAs in sticky bottom action bars on mobile devices.",
+        "Increase padding around small links and icons to expand their effective touch hit-box."
+      ],
+      "url": "https://lawsofux.com/fitts-s-law/"
+    },
+    {
+      "id": "hicks-law",
+      "name": "Hick's Law",
+      "category": "Heuristic",
+      "summary": "The time it takes to make a decision increases with the number and complexity of choices.",
+      "key_takeaways": [
+        "Minimize choices when response times are critical to increase decision efficiency.",
+        "Break complex tasks into smaller, manageable steps (progressive disclosure).",
+        "Avoid overwhelming users by highlighting recommended options and using smart defaults."
+      ],
+      "origin": "Hick's Law (or the Hick-Hyman Law) is named after a British and an American psychologist team of William Edmund Hick and Ray Hyman in 1952.",
+      "ui_violations": [
+        "Mega-menus with dozens of un-grouped links presented simultaneously.",
+        "Forms presenting 20+ fields on a single screen without grouping or steps.",
+        "Pricing pages presenting 6+ tiers with identical visual emphasis.",
+        "Unsorted dropdown select menus containing dozens of items without search or filtering."
+      ],
+      "remedies": [
+        "Use progressive disclosure: hide advanced options under 'Show more' or accordion panels.",
+        "Chunk multi-step processes into guided wizards with clear progress indicators.",
+        "Highlight a recommended default tier or choice to reduce cognitive decision fatigue.",
+        "Add fuzzy search and categorical grouping to select dropdowns with more than 8 options."
+      ],
+      "url": "https://lawsofux.com/hicks-law/"
+    },
+    {
+      "id": "jakobs-law",
+      "name": "Jakob's Law",
+      "category": "Heuristic",
+      "summary": "Users spend most of their time on other sites. This means that users prefer your site to work the same way as all the other sites they already know.",
+      "key_takeaways": [
+        "Users will transfer expectations they have built around familiar products to your product.",
+        "By leveraging existing mental models, users can focus on their tasks rather than learning new interaction patterns.",
+        "When making changes, minimize discord by empowering users to continue using a familiar version for a limited time."
+      ],
+      "origin": "Jakob's Law was coined by Jakob Nielsen, a user advocate and principal of the Nielsen Norman Group, in 2000.",
+      "ui_violations": [
+        "Placing the navigation bar or search bar in unconventional locations without standard cues.",
+        "Clicking the top-left site logo does not return the user to the home page.",
+        "Inverting standard button positions (e.g. placing 'Cancel' in primary filled style and 'Save' as a subtle link).",
+        "Custom scrollbars that break standard browser scrollwheel, touch drag, and trackpad physics."
+      ],
+      "remedies": [
+        "Align layout, search, shopping cart, and profile patterns with web standards.",
+        "Ensure the top-left branding links directly to root ('/') with proper aria-label.",
+        "Maintain platform-standard button ordering: primary action prominent on the right or bottom.",
+        "Use native browser scrolling and input primitives wherever possible."
+      ],
+      "url": "https://lawsofux.com/jakobs-law/"
+    },
+    {
+      "id": "millers-law",
+      "name": "Miller's Law",
+      "category": "Heuristic",
+      "summary": "The average person can only keep 7 (plus or minus 2) items in their working memory.",
+      "key_takeaways": [
+        "Do not use 'the magical number seven' to justify unnecessary design limitations.",
+        "Organize content into smaller, logical chunks (chunking) to help users process, understand, and memorize easily.",
+        "Short-term memory capacity will vary per person, based on their prior knowledge and situational context."
+      ],
+      "origin": "In 1956, George A. Miller published 'The Magical Number Seven, Plus or Minus Two', showing human working memory limits.",
+      "ui_violations": [
+        "Displaying credit card numbers, phone numbers, or IBANs as continuous un-spaced strings of 16-20 digits.",
+        "Navigation bars with 10+ un-categorized top-level links.",
+        "Walls of dense text without subheadings, bullet points, or visual breaks.",
+        "Dashboards presenting 15+ disconnected metric cards without categorization."
+      ],
+      "remedies": [
+        "Format credit cards in 4-digit groups (XXXX XXXX XXXX XXXX) and format phone numbers with area codes.",
+        "Limit top-level navigation items to 5-7 items, grouping remaining items into categorized flyouts.",
+        "Chunk long forms into visual cards, sections with headers, or numbered steps.",
+        "Use visual containers (cards) to cluster related metrics and data points."
+      ],
+      "url": "https://lawsofux.com/millers-law/"
+    },
+    {
+      "id": "parkinsons-law",
+      "name": "Parkinson's Law",
+      "category": "Heuristic",
+      "summary": "Any task will inflate until all of the available time is spent.",
+      "key_takeaways": [
+        "Limit the time required to complete a task to what users expect it should take.",
+        "Reduce the cognitive effort and time to complete tasks through smart defaults and autofill.",
+        "Provide time estimates for complex workflows like onboarding, forms, and surveys."
+      ],
+      "origin": "Articulated by Cyril Northcote Parkinson in 1955 as part of the opening sentence of an essay published in The Economist.",
+      "ui_violations": [
+        "Asking users to manually type address lines when geolocation or address autocomplete is feasible.",
+        "Missing autocomplete attributes on standard form fields (name, email, street-address, postal-code).",
+        "Lengthy multi-page checkouts requiring redundant billing and shipping re-entry.",
+        "Surveys without clear duration estimates ('Takes 2 minutes')."
+      ],
+      "remedies": [
+        "Include standard HTML autocomplete attributes (autocomplete='email', autocomplete='tel', etc.).",
+        "Add 'Billing address same as shipping' checkbox defaulted to true.",
+        "Provide autofill and postal code auto-lookup to expedite input tasks.",
+        "Display estimated completion time ('Estimated time: 3 mins') at the start of multi-step tasks."
+      ],
+      "url": "https://lawsofux.com/parkinsons-law/"
+    },
+    {
+      "id": "postels-law",
+      "name": "Postel's Law",
+      "category": "Heuristic",
+      "summary": "Be liberal in what you accept, and conservative in what you send.",
+      "key_takeaways": [
+        "Be empathetic, flexible, and tolerant of any number of actions the user might take.",
+        "Anticipate diverse input formats, translate them gracefully, and define clear boundaries for security.",
+        "Provide clear feedback and allow forgiving corrections rather than hard input rejections."
+      ],
+      "origin": "Formulated by Jon Postel in 1980 in RFC 760 as the Robustness Principle for transmission protocol software.",
+      "ui_violations": [
+        "Rejecting phone numbers with spaces, dashes, or country code formatting with a strict regex error.",
+        "Rejecting credit card numbers containing spaces or dashes.",
+        "Strict date inputs requiring exact 'YYYY-MM-DD' typing without a date picker or natural date parsing.",
+        "Clearing an entire form when a single validation error occurs."
+      ],
+      "remedies": [
+        "Sanitize inputs on the client before submission: strip spaces/dashes from phone and card inputs automatically.",
+        "Support flexible date and currency parsing (e.g. handling commas vs periods gracefully).",
+        "Preserve all entered user data when displaying validation error messages.",
+        "Accept various image formats (JPG, PNG, WebP) and perform automatic resizing/conversion."
+      ],
+      "url": "https://lawsofux.com/postels-law/"
+    },
+    {
+      "id": "teslers-law",
+      "name": "Tesler's Law",
+      "category": "Heuristic",
+      "summary": "For any system there is an inherent amount of complexity which cannot be reduced, only moved.",
+      "key_takeaways": [
+        "All processes have a core of complexity that cannot be designed away and must be assumed by either the user or the system.",
+        "Ensure as much of the burden as possible is lifted from users by having the system handle complexity.",
+        "Take care not to simplify interfaces to the point of abstract ambiguity or diminished utility."
+      ],
+      "origin": "While working for Xerox PARC in the mid-1980s, computer scientist Larry Tesler argued this principle of interaction design.",
+      "ui_violations": [
+        "Forcing users to choose technical parameters (e.g. database port, image compression codec) during standard tasks.",
+        "Requiring users to calculate tax, shipping costs, or totals manually.",
+        "Hiding crucial actions behind obscure, unlabeled icons in the name of 'minimalism'.",
+        "Failing to provide automatic timezone conversion for scheduled events."
+      ],
+      "remedies": [
+        "Automate system-level decisions: deduce timezone from browser, calculate taxes/shipping automatically.",
+        "Provide sensible smart defaults for all configuration fields.",
+        "Balance simplicity with utility: keep essential labels and instructions visible.",
+        "Handle file conversions and compression on the server rather than asking user to prepare exact specs."
+      ],
+      "url": "https://lawsofux.com/teslers-law/"
+    },
+    {
+      "id": "proximity-law",
+      "name": "Law of Proximity",
+      "category": "Gestalt",
+      "summary": "Objects that are near, or proximate to each other, tend to be grouped together.",
+      "key_takeaways": [
+        "Proximity helps to establish a relationship with nearby objects.",
+        "Elements in close proximity are perceived to have similar functionality or traits.",
+        "Proximity helps users understand and organize information faster and more efficiently."
+      ],
+      "origin": "Founded by Max Wertheimer in 1923 as one of the fundamental Gestalt principles of visual perception.",
+      "ui_violations": [
+        "Form input labels positioned closer to the preceding input field than to the field they describe.",
+        "Headings spaced with equal margins above and below, failing to anchor to the content below them.",
+        "Action buttons placed far away from the relevant form fields or card content.",
+        "Error messages placed at the top of a page rather than adjacent to the invalid input."
+      ],
+      "remedies": [
+        "Ensure label-to-input margin (e.g. 4-8px) is significantly smaller than the gap between fields (e.g. 20-24px).",
+        "Set heading margin-top (e.g. 32px) larger than heading margin-bottom (e.g. 8-12px) to visually bond to text.",
+        "Place inline validation errors directly beneath the relevant input element.",
+        "Group related actions (e.g. Card buttons) directly within the card container."
+      ],
+      "url": "https://lawsofux.com/law-of-proximity/"
+    },
+    {
+      "id": "common-region-law",
+      "name": "Law of Common Region",
+      "category": "Gestalt",
+      "summary": "Elements tend to be perceived into groups if they are sharing an area with a clearly defined boundary.",
+      "key_takeaways": [
+        "Common region creates a clear structure and helps users quickly and effectively understand the relationship between elements.",
+        "Adding a border or background color around an element or group of elements creates a distinct common region.",
+        "Common region can override proximity and similarity when delineating functional modules."
+      ],
+      "origin": "Formulated by psychologist Stephen Palmer in 1992 as an expansion of Gestalt perceptual organization.",
+      "ui_violations": [
+        "Cards in a grid with no visible border, shadow, or background differentiation, making items bleed together.",
+        "Sidebar navigation blending seamlessly into main content without visual delineation or background separation.",
+        "Modals and dialogs lacking distinct backdrop shading or container borders.",
+        "Complex tables where header rows and alternating rows lack subtle background banding."
+      ],
+      "remedies": [
+        "Enclose distinct items in cards using subtle borders (border border-gray-200) or contrasting background shades.",
+        "Use distinct background fills for sidebars, navbars, and modal overlays (backdrop-blur, bg-opacity).",
+        "Group related form controls inside a fieldset or boxed card container.",
+        "Use subtle row striping or cell divider lines in dense data tables."
+      ],
+      "url": "https://lawsofux.com/law-of-common-region/"
+    },
+    {
+      "id": "similarity-law",
+      "name": "Law of Similarity",
+      "category": "Gestalt",
+      "summary": "The human eye tends to perceive similar elements in a design as a complete picture, shape, or group, even if those elements are separated.",
+      "key_takeaways": [
+        "Elements that share visual characteristics (color, shape, size, orientation, texture) are perceived to belong together.",
+        "Ensure that links, buttons, and interactive elements share consistent visual cues.",
+        "Use visual differentiation to signal different functionality (e.g. primary vs secondary vs destructive actions)."
+      ],
+      "origin": "Discovered by Max Wertheimer in 1923 as part of Gestalt psychology.",
+      "ui_violations": [
+        "Using 4 different button styles for the same primary action across different pages.",
+        "Styling regular non-clickable body text with the same color and underline style as hyperlinks.",
+        "Destructive buttons (e.g. 'Delete Account') styled with the same primary green/blue color as 'Save'.",
+        "Inconsistent icon styles (mixing 1px outline icons with 3D filled icons indiscriminately)."
+      ],
+      "remedies": [
+        "Establish a unified Design System / UI token palette for button states (primary, secondary, danger, ghost).",
+        "Reserve distinct hyperlink styling (color and underline/hover state) exclusively for interactive links.",
+        "Consistently apply destructive semantics (red/rose color, distinct confirmation modal) to delete actions.",
+        "Standardize on a single icon library and visual weight (e.g. Lucide, Heroicons, Material)."
+      ],
+      "url": "https://lawsofux.com/law-of-similarity/"
+    },
+    {
+      "id": "uniform-connectedness-law",
+      "name": "Law of Uniform Connectedness",
+      "category": "Gestalt",
+      "summary": "Elements that are visually connected using colors, lines, frames, or other shapes are perceived as more related than elements with no connection.",
+      "key_takeaways": [
+        "Visually connected elements are perceived as grouping together more strongly than elements grouped by proximity or similarity.",
+        "Use connecting lines, arrows, or background tracks to indicate sequential workflows or related hierarchies.",
+        "Tab bars, stepper wizards, and breadcrumbs rely heavily on uniform connectedness."
+      ],
+      "origin": "Introduced by Stephen Palmer and Irvin Rock in 1994 as a fundamental principle of perceptual grouping.",
+      "ui_violations": [
+        "Multi-step checkout progress bars with disconnected floating circles that lack connecting lines.",
+        "Breadcrumbs that omit separator arrows or slashes, reading like a disconnected jumble of words.",
+        "Tab navigations where the active tab line doesn't connect seamlessly to the active tab panel."
+      ],
+      "remedies": [
+        "Connect multi-step wizard nodes with a horizontal or vertical rule indicating progress.",
+        "Use clear visual dividers (/, ›, →) in breadcrumb navigation trails.",
+        "Ensure active tab indicators visually anchor directly to the content container.",
+        "Use tree lines or connected branches for hierarchical folder structures."
+      ],
+      "url": "https://lawsofux.com/law-of-uniform-connectedness/"
+    },
+    {
+      "id": "pragnanz-law",
+      "name": "Law of Prägnanz",
+      "category": "Gestalt",
+      "summary": "People will perceive and interpret ambiguous or complex images as the simplest form possible, because it is the interpretation that requires the least cognitive effort.",
+      "key_takeaways": [
+        "The human eye likes to find simplicity and order in complex shapes because it prevents us from being overwhelmed.",
+        "Design with clear geometric shapes and clean visual hierarchies to reduce mental processing load.",
+        "Avoid overly intricate graphics or ambiguous icons that require conscious decoding."
+      ],
+      "origin": "Max Wertheimer and Kurt Koffka formulated this foundational law of Gestalt psychology in 1912-1923.",
+      "ui_violations": [
+        "Overly complex, abstract custom iconography where users cannot identify the function.",
+        "Cluttered layouts with irregular angles, competing visual weights, and overlapping layers.",
+        "Cards featuring 5 competing badges, icons, and ribbon graphics simultaneously."
+      ],
+      "remedies": [
+        "Use established, recognizable iconography with accompanying text labels.",
+        "Simplify layout geometry into standard rectangular grid systems with consistent rhythm.",
+        "Limit badges and decorative tags to at most one high-value pill per card."
+      ],
+      "url": "https://lawsofux.com/law-of-pragnanz/"
+    },
+    {
+      "id": "aesthetic-usability-effect",
+      "name": "Aesthetic-Usability Effect",
+      "category": "Cognitive",
+      "summary": "Users often perceive aesthetically pleasing design as design that's more usable.",
+      "key_takeaways": [
+        "An aesthetically pleasing design creates a positive response in people's brains and leads them to believe the design actually works better.",
+        "People are more tolerant of minor usability issues when the interface is visually polished.",
+        "An aesthetically pleasing design can mask usability problems and prevent issues from being discovered during usability testing."
+      ],
+      "origin": "First studied in 1995 by researchers Masaaki Kurosu and Kaori Kashimura at the Hitachi Design Center.",
+      "ui_violations": [
+        "Misaligned elements, jittery font rendering, and mismatched padding giving an amateurish impression.",
+        "Relying solely on visual eye-candy to compensate for broken navigation, slow performance, or broken error states.",
+        "Unstyled raw browser default form controls (select, checkboxes) embedded inside a modern theme."
+      ],
+      "remedies": [
+        "Enforce strict typographic scale, baseline grid alignment, and consistent 4px/8px spacing tokens.",
+        "Style form controls, checkboxes, and radio buttons with coherent brand tokens.",
+        "Never use visual polish as an excuse to skip functional usability, speed, and accessibility testing."
+      ],
+      "url": "https://lawsofux.com/aesthetic-usability-effect/"
+    },
+    {
+      "id": "doherty-threshold",
+      "name": "Doherty Threshold",
+      "category": "Cognitive",
+      "summary": "Productivity soars when a computer and its users interact at a pace (<400ms) that ensures that neither has to wait on the other.",
+      "key_takeaways": [
+        "Provide system feedback within 400ms in order to keep users' attention and increase productivity.",
+        "Use perceived performance enhancements like skeleton screens, optimistic UI updates, and background processing.",
+        "Animations and transitions should feel snappy (between 150ms and 300ms); avoid sluggish animations."
+      ],
+      "origin": "In 1982, Walter J. Doherty and Ahrin Thadhani published an IBM research paper establishing the 400ms threshold.",
+      "ui_violations": [
+        "Clicking a button triggers a network call with no immediate visual feedback, spinner, or state change for >1000ms.",
+        "Blank white screens during page transitions instead of skeleton loaders or progress bars.",
+        "Overly prolonged modal entrance animations (>600ms) that delay interaction.",
+        "Lack of optimistic UI updates when toggling switches, likes, or checkboxes."
+      ],
+      "remedies": [
+        "Provide immediate visual feedback (<100ms) for all interactive clicks (active state, spinner, disabled button).",
+        "Implement skeleton screens to indicate incoming layout structure while data loads.",
+        "Adopt optimistic updates for low-risk actions (toggles, bookmarks, cart counter) with rollback on failure.",
+        "Keep UI transition animations within 150-300ms with ease-out timing curves."
+      ],
+      "url": "https://lawsofux.com/doherty-threshold/"
+    },
+    {
+      "id": "goal-gradient-effect",
+      "name": "Goal-Gradient Effect",
+      "category": "Cognitive",
+      "summary": "The tendency to approach a goal increases with proximity to the goal.",
+      "key_takeaways": [
+        "The closer users are to completing a task, the faster they work toward reaching it.",
+        "Providing artificial progress toward a goal (endowed progress) makes users more likely to complete it.",
+        "Provide a clear indication of progress in order to motivate users to complete tasks."
+      ],
+      "origin": "First proposed by behaviorist psychologist Clark Hull in 1932 using animal learning experiments.",
+      "ui_violations": [
+        "Multi-step checkouts or profile setups without any step counter or progress bar ('Step 2 of 3').",
+        "Setting the progress bar to 0% at onboarding start instead of endowing 20% for 'Account Created'.",
+        "Hiding how many steps remain in a lengthy application process."
+      ],
+      "remedies": [
+        "Display a visual progress bar with percentage or step indicators (e.g. 'Step 2 of 4 - Almost there!').",
+        "Leverage the endowed progress effect: start new users with the first milestone already checked off.",
+        "Show completion rewards or celebrate milestones as users near task completion."
+      ],
+      "url": "https://lawsofux.com/goal-gradient-effect/"
+    },
+    {
+      "id": "occams-razor",
+      "name": "Occam's Razor",
+      "category": "Principle",
+      "summary": "Among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected.",
+      "key_takeaways": [
+        "The best method for reducing complexity is to avoid it altogether in the first place.",
+        "Analyze each element and remove as many as possible without compromising the overall function.",
+        "Do not introduce unnecessary features, buttons, or decorative elements that do not serve user goals."
+      ],
+      "origin": "Attributed to 14th-century English Franciscan friar and philosopher William of Ockham.",
+      "ui_violations": [
+        "Adding 5 redundant buttons that perform the exact same action in different places on a single screen.",
+        "Cluttering product cards with unnecessary badges, social sharing icons, and metadata that users ignore.",
+        "Requiring unnecessary configuration questions before allowing a user to try a feature."
+      ],
+      "remedies": [
+        "Audit screens to remove redundant controls, decorative noise, and low-engagement widgets.",
+        "Focus on the primary user task for each screen; eliminate secondary clutter.",
+        "Favor simple default flows over branched custom configuration flows."
+      ],
+      "url": "https://lawsofux.com/occams-razor/"
+    },
+    {
+      "id": "pareto-principle",
+      "name": "Pareto Principle",
+      "category": "Principle",
+      "summary": "The Pareto principle states that, for many events, roughly 80% of effects come from 20% of causes.",
+      "key_takeaways": [
+        "Focus energy and resources on the 20% of features that generate 80% of user value and usage.",
+        "Prioritize optimizing critical user journeys (login, search, checkout, core workflow).",
+        "Avoid spending disproportionate design/development time polishing rarely used edge-case screens."
+      ],
+      "origin": "Named after Italian civil engineer and economist Vilfredo Pareto, who in 1896 demonstrated wealth distribution in Italy.",
+      "ui_violations": [
+        "Burying the core 20% critical actions behind secondary menus while giving prominent placement to niche tools.",
+        "Failing to optimize the primary conversion funnel (checkout, signup) while over-indexing on settings subpages."
+      ],
+      "remedies": [
+        "Identify top 20% user tasks via analytics and place them front-and-center in primary navigation and hero areas.",
+        "Streamline high-frequency journeys with keyboard shortcuts and prominent quick actions.",
+        "Ensure primary CTA on every page clearly maps to the most common user intention."
+      ],
+      "url": "https://lawsofux.com/pareto-principle/"
+    },
+    {
+      "id": "peak-end-rule",
+      "name": "Peak-End Rule",
+      "category": "Cognitive",
+      "summary": "People judge an experience largely based on how they felt at its peak and at its end, rather than the total sum or average of every moment of the experience.",
+      "key_takeaways": [
+        "Pay particular attention to the most intense points (peaks) and the final moments (ends) of the user journey.",
+        "Identify the moments when your product is most helpful, valuable, or entertaining and delight the user.",
+        "Remember that people recall negative experiences more vividly than positive ones; ensure graceful error recovery."
+      ],
+      "origin": "Psychological heuristic described by Daniel Kahneman and colleagues in a 1993 study.",
+      "ui_violations": [
+        "Abrupt, cold completion screens after successful purchase or project submission ('Order 1234 recorded.').",
+        "Harsh, unhelpful 404 and 500 error pages with raw stack traces or dead ends.",
+        "Frustrating cancellation or account deletion flows that leave an intensely bitter final impression."
+      ],
+      "remedies": [
+        "Design celebratory, delightful completion states (confetti, reassuring confirmation, clear next steps).",
+        "Design helpful, friendly 404/500 error pages with search, popular links, and support contact.",
+        "Make offboarding respectful, quick, and polite to preserve positive long-term brand memory."
+      ],
+      "url": "https://lawsofux.com/peak-end-rule/"
+    },
+    {
+      "id": "serial-position-effect",
+      "name": "Serial Position Effect",
+      "category": "Cognitive",
+      "summary": "Users have a propensity to best remember the first and last items in a series.",
+      "key_takeaways": [
+        "Placing the least important items in the middle of lists can be helpful because these items tend to be stored less frequently in working memory.",
+        "Positioning key actions on the far left and right within elements such as navigation can increase memorability (Primacy and Recency effects).",
+        "In navigation, place the most critical links at the beginning and the final action (e.g. Profile or Primary CTA) at the end."
+      ],
+      "origin": "Coined by Hermann Ebbinghaus through his pioneering experimental studies on memory in 1885.",
+      "ui_violations": [
+        "Burying the most critical navigation item in the dead middle of a long navbar.",
+        "Placing the most attractive pricing tier in an obscure middle position without visual isolation.",
+        "Arranging onboarding steps without highlighting the initial setup and concluding milestone."
+      ],
+      "remedies": [
+        "Place key primary navigation links at the start (left) and user profile/action button at the end (far right).",
+        "In mobile bottom navigation bars, place the home icon at the far left and profile/settings at the far right.",
+        "Structure lists and tables so critical actions or summaries appear in the first or final positions."
+      ],
+      "url": "https://lawsofux.com/serial-position-effect/"
+    },
+    {
+      "id": "von-restorff-effect",
+      "name": "Von Restorff Effect",
+      "category": "Cognitive",
+      "summary": "The Von Restorff effect, also known as The Isolation Effect, predicts that when multiple similar objects are present, the one that differs from the rest is most likely to be remembered.",
+      "key_takeaways": [
+        "Make important information or key actions visually distinctive from surrounding elements.",
+        "Use restraint when placing visual emphasis to avoid elements competing with one another for attention.",
+        "Do not rely solely on color to communicate contrast, ensuring accessibility for colorblind users."
+      ],
+      "origin": "Discovered by German psychiatrist and pediatrician Hedwig von Restorff in 1933.",
+      "ui_violations": [
+        "All buttons on a page having identical styling, colors, and border weights, making the primary CTA blend in.",
+        "Overusing accent badges, blinking banners, and popups until nothing stands out.",
+        "Signaling state changes (e.g. errors or active status) solely through red/green colors without icons or text."
+      ],
+      "remedies": [
+        "Use a single, distinctive high-contrast accent color for the primary Call to Action (CTA).",
+        "Add a 'Popular' or 'Recommended' badge and elevated border to the single most relevant card in a pricing grid.",
+        "Combine color with icons, font weight, or shapes so visual distinctions remain clear under color-deficient vision."
+      ],
+      "url": "https://lawsofux.com/von-restorff-effect/"
+    },
+    {
+      "id": "zeigarnik-effect",
+      "name": "Zeigarnik Effect",
+      "category": "Cognitive",
+      "summary": "People remember uncompleted or interrupted tasks better than completed tasks.",
+      "key_takeaways": [
+        "Invite content discovery by providing clear signifiers of additional content or incomplete progress.",
+        "Providing artificial progress toward a goal will help ensure users are more likely to finish completing a task.",
+        "Display progress bars and profile completion meters to encourage users to finish onboarding."
+      ],
+      "origin": "Discovered by Soviet psychologist Bluma Zeigarnik in 1927 after observing waiters remembering unpaid orders better than paid ones.",
+      "ui_violations": [
+        "Incomplete user profiles without any indicator of what information is missing.",
+        "Forms where draft progress is silently discarded on navigation without notice or auto-save.",
+        "Multi-step journeys where the user has no sense of how much remains to finish."
+      ],
+      "remedies": [
+        "Display profile completion meters ('Your profile is 70% complete - add your photo to reach 100%').",
+        "Auto-save draft inputs and show reassuring 'Draft saved' indicators with easy resumption.",
+        "Provide notification reminders for abandoned checkouts or uncompleted forms with one-click return."
+      ],
+      "url": "https://lawsofux.com/zeigarnik-effect/"
+    }
+  ]
+}

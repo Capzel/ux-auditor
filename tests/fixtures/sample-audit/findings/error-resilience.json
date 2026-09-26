@@ -1,0 +1,29 @@
+{
+  "category": "error-resilience",
+  "summary": "Error prevention and forgiving input formatting review.",
+  "findings": [
+    {
+      "title": "Phone input rejects spaces and dashes with strict validation regex",
+      "status": "warn",
+      "severity": "medium",
+      "confidence": "likely",
+      "evidence_tier": "static",
+      "viewport": "both",
+      "personas_affected": ["adult", "senior"],
+      "laws": ["postels-law"],
+      "heuristics": ["error-prevention", "help-users-recognize-errors"],
+      "impact": "Users who copy-paste or naturally type standard formatted phone numbers receive an unhelpful rejection.",
+      "evidence": [
+        {
+          "file": "utils/validators.ts",
+          "line": 15,
+          "snippet": "export const phoneRegex = /^\\d{10}$/;"
+        }
+      ],
+      "remedy": {
+        "summary": "Strip whitespace, dashes, and parentheses before validation.",
+        "effort": "S"
+      }
+    }
+  ]
+}

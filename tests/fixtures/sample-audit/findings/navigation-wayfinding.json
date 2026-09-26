@@ -1,0 +1,29 @@
+{
+  "category": "navigation-wayfinding",
+  "summary": "Navigation and mental models audit.",
+  "findings": [
+    {
+      "title": "Site logo does not link back to homepage",
+      "status": "warn",
+      "severity": "low",
+      "confidence": "confirmed",
+      "evidence_tier": "static",
+      "viewport": "both",
+      "personas_affected": ["all"],
+      "laws": ["jakobs-law"],
+      "heuristics": ["consistency-and-standards", "user-control-and-freedom"],
+      "impact": "Users accustomed to web standard conventions cannot click the logo to return to the home screen.",
+      "evidence": [
+        {
+          "file": "components/Header.tsx",
+          "line": 12,
+          "snippet": "<div className=\"text-xl font-bold\">SampleShop</div>"
+        }
+      ],
+      "remedy": {
+        "summary": "Wrap logo text in <Link href=\"/\"> with accessible aria-label.",
+        "effort": "S"
+      }
+    }
+  ]
+}

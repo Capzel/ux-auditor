@@ -1,0 +1,34 @@
+{
+  "category": "interaction-ergonomics",
+  "summary": "Touch target sizing and mobile ergonomics review.",
+  "findings": [
+    {
+      "title": "Mobile Add-to-Cart button is 32px height, below 44px/48px touch guidelines",
+      "status": "fail",
+      "severity": "high",
+      "confidence": "confirmed",
+      "evidence_tier": "runtime",
+      "viewport": "mobile",
+      "personas_affected": ["senior", "young", "adult"],
+      "laws": ["fitts-law"],
+      "heuristics": ["flexibility-and-efficiency-of-use", "consistency-and-standards"],
+      "impact": "Small target height causes missed taps and customer frustration during mobile checkout.",
+      "evidence": [
+        {
+          "selector": "button.add-to-cart",
+          "note": "Measured width: 120px, height: 32px, margin: 4px"
+        },
+        {
+          "file": "components/ProductCard.tsx",
+          "line": 45,
+          "snippet": "<button className=\"h-8 px-3 text-xs bg-indigo-600\">Add to Cart</button>"
+        }
+      ],
+      "remedy": {
+        "summary": "Increase height to min-h-[48px] with padding py-3.",
+        "effort": "S",
+        "code": "<button className=\"min-h-[48px] px-4 py-3 text-sm font-medium bg-indigo-600 text-white rounded-lg\">Add to Cart</button>"
+      }
+    }
+  ]
+}

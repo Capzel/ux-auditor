@@ -1,0 +1,8 @@
+/ux-audit/
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+tests/fixtures/sample-audit/audit-data.json
+tests/fixtures/sample-audit/*.md
+tests/fixtures/sample-audit/*.html
