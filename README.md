@@ -373,6 +373,5 @@ More details in [`CLAUDE.md`](CLAUDE.md).
 
 - Laws of UX curated by [Jon Yablonski](https://jonyablonski.com/) at [lawsofux.com](https://lawsofux.com/).
 - 10 Usability Heuristics for User Interface Design by [Jakob Nielsen](https://www.nngroup.com/people/jakob-nielsen/) at [Nielsen Norman Group](https://www.nngroup.com/).
-- Architectural layout inspired by [`claude-gdpr-audit`](https://github.com/Capzel/claude-gdpr-audit).
 
 Released under the [MIT License](LICENSE).
